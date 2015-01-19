@@ -11,8 +11,6 @@ int main(int argc, char **argv)
 	SDL_Event e;
 	GLint lxloc, lyloc;
 	float lx = 0.5f;
-	float vx = 0.5f;
-	float vy = -0.2f;
 	float ly = 0.3f;
 	int r = 1;
 	
@@ -43,18 +41,11 @@ int main(int argc, char **argv)
    			}
    		}
    			
-
    		SDL_GL_SwapBuffers();
    		glClear(GL_COLOR_BUFFER_BIT);
    		
-   		
    		glUniform1fv(lxloc,1, &lx);
    		glUniform1fv(lyloc,1, &ly);
-   		
-
-   		
-   		if(lx > 1 || lx < 0) vx*=-1;
-   		if(ly > 1 || ly < 0) vy*=-1;
    		
    		glBegin(GL_QUADS);
 			glVertex2f(0, 0);
