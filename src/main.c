@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	float ly = 0.3f;
 	int r = 1;
 	
-	if(argc > 1) {
+	if(argc > 2) {
 		shader(argv[1], argv[2]);
 	} else {
 		shader("shaders/vertex.glsl", "shaders/fragment.glsl");
